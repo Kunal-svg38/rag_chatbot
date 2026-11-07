@@ -10,7 +10,7 @@ router.post("/upload", upload.single("file"), async(req, res) => {
     try {
         const {docId, workspaceId } = req.body;
         const file = req.file;
-
+        console.log(file)
         const doc = await extractFile(file);
         const chunks = chunkText(doc);
         const chunkDocs = await insertChunks(workspaceId, docId, chunks);

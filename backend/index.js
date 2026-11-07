@@ -15,6 +15,6 @@ app.get('/health', (req, res) => {
 });
 
 app.listen(port, async () => {
-  console.log(`Server is running on http://localhost:${port}`);
+  console.log(`Server is running on ${port}`);
   await connectDB();
 });
